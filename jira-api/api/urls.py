@@ -5,7 +5,7 @@ from .views import TaskViewSet, CategoryViewSet, CreateUserView, ListUserView, L
 # Viewsetsで定義したものはroutersで宣言する
 router = routers.DefaultRouter()
 router.register('category', CategoryViewSet)
-router.register('task', TaskViewSet)
+router.register('tasks', TaskViewSet)
 router.register('profile', ProfileViewSet)
 
 # generics系はurlpatternsに入れる

@@ -40,7 +40,7 @@ class Task(models.Model):
     criteria = models.CharField(max_length=100)
     status = models.CharField(max_length=40, choices=STATUS, default='1')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    estime = models.IntegerField(validators=[MinValueValidator(0)])
+    estimate = models.IntegerField(validators=[MinValueValidator(0)])
     owner = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='owner')
     responsible = models.ForeignKey(

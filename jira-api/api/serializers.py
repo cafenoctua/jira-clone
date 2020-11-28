@@ -30,10 +30,10 @@ class CategorySerializer(serializers.ModelSerializer):
 class TaskSerializer(serializers.ModelSerializer):
     category_item = serializers.ReadOnlyField(
         source='category.item', read_only=True)
-    owner_item = serializers.ReadOnlyField(
+    owner_username = serializers.ReadOnlyField(
         source='owner.username', read_only=True)
-    resuposible_username = serializers.ReadOnlyField(
-        source='resposible.username', read_only=True)
+    responsible_username = serializers.ReadOnlyField(
+        source='responsible.username', read_only=True)
     status_name = serializers.CharField(
         source='get_status_display', read_only=True)
     created_at = serializers.DateTimeField(
